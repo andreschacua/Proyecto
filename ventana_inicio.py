@@ -5,13 +5,20 @@ ventana_inicio = tk.Tk()
 ventana_inicio.geometry("500x800")
 ventana_inicio.title("Resident Evil")
 
+# imagenes de los botones
+imagen_principiante = tk.PhotoImage (file = "img\principiante_buton.png")
+
 # Crea los botones
-boton_principiante = tk.Button(ventana_inicio, text="Principiante")
+#boton_principiante = tk.Button(ventana_inicio, text="Principiante")
+boton_principiante = tk.Button(ventana_inicio, image=imagen_principiante, borderwidth = 0)
 boton_avanzado = tk.Button(ventana_inicio, text="Avanzado")
 
 # Coloca los botones
-boton_principiante.pack()
-boton_avanzado.pack()
+boton_principiante.place(x=250, y=550, anchor="center")
+boton_avanzado.place(x=250, y=650, height=50, anchor="center")
+
+# Estilo botones
+
 
 # Eventos de los botones
 def evento_boton_principiante():
